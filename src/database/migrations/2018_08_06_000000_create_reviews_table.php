@@ -30,7 +30,7 @@ class CreateReviewsTable extends Migration
             $table->is('rejected');
             $table->at('rejected');
             $table->unsignedInteger('rejected_count')->default(0);
-            
+
             $table->standardTime();
         });
 
