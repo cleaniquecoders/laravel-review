@@ -1,16 +1,34 @@
 
-[![Build Status](https://travis-ci.org/cleanique-coders/laravel-review.svg?branch=master)](https://travis-ci.org/cleanique-coders/laravel-review) [![Latest Stable Version](https://poser.pugx.org/cleanique-coders/laravel-review/v/stable)](https://packagist.org/packages/cleanique-coders/laravel-review) [![Total Downloads](https://poser.pugx.org/cleanique-coders/laravel-review/downloads)](https://packagist.org/packages/cleanique-coders/laravel-review) [![License](https://poser.pugx.org/cleanique-coders/laravel-review/license)](https://packagist.org/packages/cleanique-coders/laravel-review)
+[![Build Status](https://travis-ci.org/cleaniquecoders/laravel-review.svg?branch=master)](https://travis-ci.org/cleaniquecoders/laravel-review) [![Latest Stable Version](https://poser.pugx.org/cleaniquecoders/laravel-review/v/stable)](https://packagist.org/packages/cleaniquecoders/laravel-review) [![Total Downloads](https://poser.pugx.org/cleaniquecoders/laravel-review/downloads)](https://packagist.org/packages/cleaniquecoders/laravel-review) [![License](https://poser.pugx.org/cleaniquecoders/laravel-review/license)](https://packagist.org/packages/cleaniquecoders/laravel-review)
 
 ## About Your Package
 
-Tell people about your package
+We always want to review something in order to get approval to proceed. 
+
+This package enabled developers to write their own logic to handle:
+
+1. Request for review
+2. Have multiple review approval / rejection
+3. Enable developers to design the workflow of the review
+	- on approved review from reviewer A, proceed review to B and C
+	- on rejected review from reviewer A, return back to requestor
+4. Enabled audit trail
+5. Each review will have stage number - review #1, #2, #3, etc.
+6. Enable optional review
+7. Default Policy
+	- [ ] Owner can update
+		- [ ] If review is not locked
+		- [ ] If review is not send yet for review
+	- [ ] Reviewer can update
+		- [ ] If current review status under review mode
+		- [ ] If current logged in user is the reviewer of the review
 
 ## Installation
 
-1. In order to install `cleanique-coders/laravel-review` in your Laravel project, just run the *composer require* command from your terminal:
+1. In order to install `cleaniquecoders/laravel-review` in your Laravel project, just run the *composer require* command from your terminal:
 
 ```
-$ composer require cleanique-coders/laravel-review
+$ composer require cleaniquecoders/laravel-review
 ```
 
 2. Then in your `config/app.php` add the following to the providers array:
@@ -39,7 +57,7 @@ $ vendor/bin/phpunit -v --coverage-text --colors=never --stderr
 
 ## Contributing
 
-Thank you for considering contributing to the `cleanique-coders/laravel-review`!
+Thank you for considering contributing to the `cleaniquecoders/laravel-review`!
 
 ### Bug Reports
 
@@ -51,7 +69,7 @@ Remember, bug reports are created in the hope that others with the same problem 
 
 ## Coding Style
 
-`cleanique-coders/laravel-review` follows the PSR-2 coding standard and the PSR-4 autoloading standard. 
+`cleaniquecoders/laravel-review` follows the PSR-2 coding standard and the PSR-4 autoloading standard. 
 
 You may use PHP CS Fixer in order to keep things standardised. PHP CS Fixer configuration can be found in `.php_cs`.
 
