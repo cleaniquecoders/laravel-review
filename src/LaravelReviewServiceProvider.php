@@ -15,16 +15,16 @@ class LaravelReviewServiceProvider extends ServiceProvider
          * Configuration
          */
         $this->publishes([
-            __DIR__ . '/config/reviewer.php' => config_path('reviewer.php'),
+            __DIR__ . '/../config/reviewer.php' => config_path('reviewer.php'),
         ], 'reviewer');
         $this->mergeConfigFrom(
-            __DIR__ . '/config/reviewer.php', 'reviewer'
+            __DIR__ . '/../config/reviewer.php', 'reviewer'
         );
 
         /*
          * Migrations
          */
-        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 
     /**

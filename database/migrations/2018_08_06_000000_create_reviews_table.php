@@ -11,7 +11,7 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('reviews', function (Blueprint $table) {
+        Schema::create('reviews', function(Blueprint $table) {
             $table->increments('id');
             $table->hashslug();
             $table->user();
@@ -34,7 +34,7 @@ class CreateReviewsTable extends Migration
             $table->standardTime();
         });
 
-        Schema::create('review_reviewers', function (Blueprint $table) {
+        Schema::create('review_reviewers', function(Blueprint $table) {
             $table->increments('id');
             $table->hashslug();
             $table->belongsTo('reviews');

@@ -56,7 +56,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
 
     protected function assertTableHasColumns($table, $columns)
     {
-        collect($columns)->each(function ($column) use ($table) {
+        collect($columns)->each(function($column) use ($table) {
             $this->assertTrue(Schema::hasColumn($table, $column));
         });
     }
